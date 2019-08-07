@@ -8,6 +8,8 @@ import { ThreadSectionComponent } from './components/thread-section/thread-secti
 import { MessageSectionComponent } from './components/message-section/message-section.component';
 import { ThreadListComponent } from './components/thread-list/thread-list.component';
 import { MessageListComponent } from './components/message-list/message-list.component';
+import { ThreadsService } from './services/threads.service';
+import { HttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,8 @@ import { MessageListComponent } from './components/message-list/message-list.com
     ThreadListComponent,
     MessageListComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, HttpClient],
+  providers: [ThreadsService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
