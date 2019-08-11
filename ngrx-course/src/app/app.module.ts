@@ -10,6 +10,7 @@ import { ThreadListComponent } from './components/thread-list/thread-list.compon
 import { MessageListComponent } from './components/message-list/message-list.component';
 import { ThreadsService } from './services/threads.service';
 import { HttpClient } from '@angular/common/http';
+import { StoreModuel } from 'rxjs/'
 
 @NgModule({
   declarations: [
