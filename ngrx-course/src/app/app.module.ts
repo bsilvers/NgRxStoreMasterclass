@@ -10,7 +10,7 @@ import { ThreadListComponent } from './components/thread-list/thread-list.compon
 import { MessageListComponent } from './components/message-list/message-list.component';
 import { ThreadsService } from './services/threads.service';
 import { HttpClient } from '@angular/common/http';
-import { StoreModuel } from 'rxjs/'
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -21,7 +21,12 @@ import { StoreModuel } from 'rxjs/'
     ThreadListComponent,
     MessageListComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClient],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClient,
+    StoreModule.forRoot({})
+  ],
   providers: [ThreadsService],
   bootstrap: [AppComponent]
 })
